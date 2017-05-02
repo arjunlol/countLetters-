@@ -5,9 +5,14 @@ function countLetters (letters){
   var countOfLetters = {};
   letters = letters.split(" ").join("").toLowerCase();
   for (l of letters){
-    countOfLetters = isItInObject(l, countOfLetters);
-  }
-  return countOfLetters;
+    if(countOfLetters[l]) {
+      countOfLetters[l] +=1;
+    } else {
+      countOfLetters[l] = 1;
+    }
+  //   countOfLetters = isItInObject(l, countOfLetters);
+ }
+ return countOfLetters;
 }
 
 
